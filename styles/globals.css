@@ -1,26 +1,18 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.navbarLink:hover {
+  color: #47d2af;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@keyframes build
+{
+  0% {
+    transform: translateZ(0);
+}
+100% {
+    transform: translate3d(-70%,0,0);
+}
 }
 
-* {
-  box-sizing: border-box;
-}
+.buildSlide{
+  animation: build 60s linear infinite;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
