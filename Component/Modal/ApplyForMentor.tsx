@@ -116,8 +116,8 @@ const ApplyForMentor: React.FC<ApplyForMentorProps> = () => {
 
 
                             <Box>
-                                {showSuccessMessage && <Text align={"center"} color={"brand.200"} fontWeight={600}>Message Sent Successfully!</Text>}
-                                {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not deliver the message, please check all the fields and try again!</Text>}
+                                {showSuccessMessage && <Text align={"center"} color={"brand.200"} fontWeight={600}>Request Sent Successfully!</Text>}
+                                {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not submit the request, please check all the fields and try again!</Text>}
                             </Box>
                         </Stack>
 

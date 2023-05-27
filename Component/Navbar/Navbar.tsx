@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 
             align={"center"}
             justifyContent={{ md: "space-between" }}>
-                
+
             <Link href="/">
                 <Flex width={"30%"}
                     marginLeft={{ base: "5", md: "20", lg: "20" }}
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
             </Link>
 
 
-            <Flex width={"50%"}
+            <Flex width={"70%"}
                 justifyContent={{ md: "space-between" }}
                 display={{ base: "none", md: "flex" }}
                 align={"flex-start"}
@@ -66,6 +66,10 @@ const Navbar: React.FC = () => {
                 </Link>
                 <Link href="/Mentor/BecomeMentor" className='navbarLink'
                     style={{ textDecoration: "none", paddingTop: "5px" }} >Become a Mentor
+                </Link>
+
+                <Link href="/RegisterMenteeForm" className='navbarLink'
+                    style={{ textDecoration: "none", paddingTop: "5px" }}>Register as Mentee
                 </Link>
                 {/* <Link href="#Projects" className='navbarLink'
                     style={{ textDecoration: "none", paddingTop: "5px" }}>Projects
