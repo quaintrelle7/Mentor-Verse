@@ -3,6 +3,7 @@ import MentorItem from '../../Component/MentorData/MentorItem';
 import Mentors from '../../Component/MentorData/MentorData';
 import { Box, Grid } from '@chakra-ui/react';
 import FilterMentor from '../../Component/MentorData/FilterMentor';
+import Navbar from '../../Component/Navbar/Navbar';
 
 
 
@@ -14,6 +15,7 @@ const FindMentor: React.FC<FindMentorProps> = () => {
 
     return (
         <div>
+            <Navbar/>
 
 
             <Box width={"100%"} height={"800px"} bg="brand.100" p={10}>

@@ -41,15 +41,18 @@ const Navbar: React.FC = () => {
 
             align={"center"}
             justifyContent={{ md: "space-between" }}>
+                
+            <Link href="/">
+                <Flex width={"30%"}
+                    marginLeft={{ base: "5", md: "20", lg: "20" }}
+                    fontWeight="700"
+                    letterSpacing={1}
+                    fontSize={"22px"}
+                    color={"brand.300"}>
+                    Web3Mentor
+                </Flex>
+            </Link>
 
-            <Flex width={"30%"}
-                marginLeft={{ base: "5", md: "20", lg: "20" }}
-                fontWeight="700"
-                letterSpacing={1}
-                fontSize={"22px"}
-                color={"brand.300"}>
-                Web3Mentor
-            </Flex>
 
             <Flex width={"50%"}
                 justifyContent={{ md: "space-between" }}
