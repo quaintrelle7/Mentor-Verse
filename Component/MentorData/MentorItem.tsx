@@ -1,5 +1,6 @@
-import { Center, Box, Stack, Heading, Image, Flex, Button,Text } from '@chakra-ui/react';
+import { Center, Box, Stack, Heading, Image, Flex, Button, Text } from '@chakra-ui/react';
 import React from 'react';
+import ApplyForMentor from '../../Component/Modal/ApplyForMentor';
 
 type MentorItemProps = {
     name: String,
@@ -30,12 +31,13 @@ const MentorItem: React.FC<MentorItemProps> = ({
                         <Flex >
                             {
                                 expertList.map((item) => (
-                                    <Box m={2} p={2}  borderRadius={3} bg="green.300" key={item as string}>{item}</Box>
+                                    <Box m={2} p={2} borderRadius={20} bg="brand.300" key={item as string}>{item}</Box>
                                 ))
                             }
                         </Flex>
 
-                        <Button>Schedule a call</Button>
+                        {/* <Button>Schedule a call</Button> */}
+                        < ApplyForMentor />
 
                     </Stack>
 

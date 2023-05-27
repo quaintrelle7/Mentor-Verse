@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "noImplicitThis": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    
   },
   "include": [
     "next-env.d.ts",

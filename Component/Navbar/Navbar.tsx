@@ -7,6 +7,7 @@ import { IoMdClose } from "react-icons/io"
 import { CgProfile } from "react-icons/cg"
 import web3 from "../../Blockend/web3"
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 
 const Navbar: React.FC = () => {
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
                 fontWeight="700"
                 letterSpacing={1}
                 fontSize={"22px"}
-                color={"#47d2af"}>
+                color={"brand.300"}>
                 Web3Mentor
             </Flex>
 
@@ -71,7 +72,9 @@ const Navbar: React.FC = () => {
                     style={{ textDecoration: "none", paddingTop: "5px" }}>My Profile
                 </Link>
 
-                {account ? (
+                <ConnectButton />
+
+                {/* {account ? (
                     <Box >
                         <CgProfile fontSize={30} onClick={() => setShowProfile(!showProfile)}>
 
@@ -88,10 +91,12 @@ const Navbar: React.FC = () => {
 
 
 
-                ) : (<Button >
-                    Connect Wallet
-                </Button>)
-                }
+                ) : (
+                    // <Button >
+                    //     Connect Wallet
+                    // </Button>
+                   
+                } */}
 
             </Flex>
 

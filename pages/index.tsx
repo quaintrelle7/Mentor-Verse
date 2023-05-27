@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../Component/Navbar/Navbar'
@@ -21,6 +23,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
+      
       <Homepage />
 
 

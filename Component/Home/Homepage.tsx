@@ -7,13 +7,13 @@ type HomepageProps = {
 
 const Homepage: React.FC<HomepageProps> = () => {
 
-    const companies = ["Polygon", "Filecoin", "Spheron", "Google"
+    const companies = ["Polygon", "Filecoin", "Spheron", "Google", "AWS", "Hasura", "DigitalOcean", "Replit"
     ]
     return (
 
         <>
 
-            <Center bg="#051411" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "500px" }} py={{ base: "15vw", lg: "5vw" }} px={"5vw"}>
+            <Center bg="brand.200" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "500px" }} py={{ base: "15vw", lg: "5vw" }} px={"5vw"}>
                 <Box width={"50%"}>
                     <Heading>
                         Find your Web3 Mentors at one place.
@@ -27,7 +27,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <Box bg="brand.100" p={6}>
                 <Stack alignItems={"center"}>
 
-                    <Heading>Our Mentors Work in</Heading>
+                    <Heading color={"brand.300"}>Our Mentors Work in</Heading>
                 </Stack>
                 <Flex justifyContent={"space-between"} className='buildSlide'>
                     {
@@ -42,7 +42,7 @@ const Homepage: React.FC<HomepageProps> = () => {
 
 
             </Box>
-            <Center bg="brand.100" p="10">
+            <Center bg="brand.200" p="10">
                 <Box width={"400px"} height={"300px"} bg="white" p="10" borderRadius={10}>
 
 

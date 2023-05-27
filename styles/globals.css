@@ -1,18 +1,16 @@
 .navbarLink:hover {
-  color: #47d2af;
+  color: #ff0032;
 }
 
-@keyframes build
-{
+@keyframes build {
   0% {
     transform: translateZ(0);
-}
-100% {
-    transform: translate3d(-70%,0,0);
-}
+  }
+  100% {
+    transform: translate3d(-70%, 0, 0);
+  }
 }
 
-.buildSlide{
-  animation: build 60s linear infinite;
-
+.buildSlide {
+  animation: build 60s linear infinite  ;
 }
