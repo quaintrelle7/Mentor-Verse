@@ -22,7 +22,7 @@ const ApplyForMentor: React.FC<ApplyForMentorProps> = () => {
     const finalRef = React.useRef(null)
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const [showFailureMessage, setShowFailureMessage] = useState(true);
+    const [showFailureMessage, setShowFailureMessage] = useState(false);
     //TO-DO
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

@@ -90,7 +90,7 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
         <>
             <Navbar />
 
-            <Center bg="brand.100" color={"white"} width={"100%"} height={"780px"} overflow={"initial"}>
+            <Stack py={6} gap={6} alignItems={"center"} bg="brand.100" color={"white"} width={"100%"} height={"780px"} overflow={"initial"}>
                 <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
                     <Heading color="brand.300">Register as a Mentee</Heading>
                     <br></br>
@@ -131,22 +131,30 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                         {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
                     </form>
                 </Stack>
-            </Center>
+            
+                <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+                    <Heading color="brand.300">Mint NFT</Heading>
+                    <form onSubmit={handleSubmit}>
 
-            <form onSubmit={handleSubmit}>
+                        <label>
+                            To Address:
+                            <Input type="text" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
+                        </label>
+                        <br />
+                        <label>
+                            Token URI:
+                            <Input type="text" value={tokenURI} onChange={(e) => setTokenURI(e.target.value)} />
+                        </label>
+                        <br />
+                        <br/>
+                        <Button width={"100%"} bg="teal" type="submit">Mint NFT</Button>
+                    </form>
+                </Stack>
+            </Stack>
 
-                <label>
-                    To Address:
-                    <input type="text" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Token URI:
-                    <input type="text" value={tokenURI} onChange={(e) => setTokenURI(e.target.value)} />
-                </label>
-                <br />
-                <Button type="submit">Mint NFT</Button>
-            </form>
+            
+
+
         </>
 
     )

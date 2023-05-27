@@ -1,4 +1,4 @@
-import { Box, Flex, Center, Stack, Grid, Image, Text, Divider, Heading, Button } from '@chakra-ui/react';
+import { Box, Flex, Center, Stack, Grid, Image, Text, Divider, Heading, Button, Input } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 import { NFTContract } from "../../Blockend/interact"
@@ -17,6 +17,8 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ name, description, title, men
 
     const [tokenId, setTokenId] = useState(0);
     const [account, setAccount] = useState("");
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [showFailureMessage, setShowFailureMessage] = useState(false);
 
 
     useEffect(() => {
@@ -36,12 +38,16 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ name, description, title, men
             await NFTContract.methods.transferNFT(account, mentorAddress, tokenId).send({ from: account });
 
             console.log('Gift Sent successfully!');
-
+            setShowSuccessMessage(true);
+            setShowFailureMessage(false);
+            setTokenId(0);
 
             // Additional logic after successful mentor registration
             console.log(name);
         } catch (error) {
 
+            setShowSuccessMessage(false);
+            setShowFailureMessage(true);
             console.error(error);
         }
     }
@@ -54,20 +60,29 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ name, description, title, men
 
                 <Flex>
                     <Box width={"40%"}>
-                        <Stack alignItems={"center"}  >
-                            <Image border="3px solid white" width={"70px"} src={image} alt="Profile Picture" borderRadius={"full"} />
+                        <Stack   >
+                            <Flex >
+                                <Image border="3px solid white" width={"50px"} src={image} alt="Profile Picture" borderRadius={"full"} />
+                                <Text mt={6} mx={6} color="brand.300" fontWeight={700}>{title}</Text>
+                            </Flex>
                             <Text color="brand.300">{mentorAddress}</Text>
-                            <Text color="brand.300" fontWeight={700}>{title}</Text>
+
+
 
                             <form onSubmit={handleGift}>
                                 <label>Enter TokenId of NFT</label>
-                                <input type='number' value={tokenId}
-                                    onChange={(e) => {
-                                        setTokenId(Number(e.target.value));
-                                    }}
-                                    name="tokenId"></input>
-                                <Button type="submit">Gift NFT</Button>
+
+                                <Input mx={1} width={"20"} type="number" value={tokenId} onChange={(e) => setTokenId(Number(e.target.value))} />
+
+                                <Button m={2} type="submit">Gift NFT</Button>
                             </form>
+
+                            <Box>
+                                {showSuccessMessage && <Text color={"brand.200"} fontWeight={600}>Gifted NFT Successfully!</Text>}
+                                {showFailureMessage && <Text color={"red"} fontWeight={400}>Could not gift the NFT, please check all the fields and try again!</Text>}
+                            </Box>
+
+
 
                         </Stack>
                     </Box>

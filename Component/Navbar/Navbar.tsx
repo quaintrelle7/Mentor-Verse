@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
             </Link>
 
 
-            <Flex width={"70%"}
+            <Flex width={"60%"}
                 justifyContent={{ md: "space-between" }}
                 display={{ base: "none", md: "flex" }}
                 align={"flex-start"}
@@ -69,15 +69,15 @@ const Navbar: React.FC = () => {
                 </Link>
 
                 <Link href="/RegisterMenteeForm" className='navbarLink'
-                    style={{ textDecoration: "none", paddingTop: "5px" }}>Register as Mentee
+                    style={{ textDecoration: "none", paddingTop: "5px" }}> My Profile
                 </Link>
                 {/* <Link href="#Projects" className='navbarLink'
                     style={{ textDecoration: "none", paddingTop: "5px" }}>Projects
                 </Link> */}
 
-                <Link href="/Profile/MyProfile" className='navbarLink'
+                {/* <Link href="/Profile/MyProfile" className='navbarLink'
                     style={{ textDecoration: "none", paddingTop: "5px" }}>My Profile
-                </Link>
+                </Link> */}
 
                 <ConnectButton />
 
