@@ -37,19 +37,14 @@ const MentorProfilePage: React.FC<MentorProfilePageProps> = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <Navbar />
 
 
-            <Box width={"100%"} height={"800px"} bg="brand.100" p={10}>
+            <Box width={"100%"} height={"100%"} bg="brand.100" p={10}>
 
 
-                <Grid templateColumns={{
-                    base: 'repeat(1, 1fr)',
-                    sm: 'repeat(1, 1fr)',
-                    md: 'repeat(2, 1fr)',
-                    lg: 'repeat(3, 1fr)'
-                }} gap={{ sm: 6, md: 8, lg: 8 }} alignContent={"center"} py={6} >
+               
                     {
                         mentorList.map((item, index) =>
                             <ProfilePage key={index} name={item.name}
@@ -62,13 +57,13 @@ const MentorProfilePage: React.FC<MentorProfilePageProps> = () => {
 
 
                     }
-                </Grid>
+                
 
             </Box>
 
 
 
-        </div>
+        </>
     )
 }
 export default MentorProfilePage;
