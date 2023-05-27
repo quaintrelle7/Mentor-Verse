@@ -7,9 +7,10 @@ import {
     Box, Input, Flex, Stack, Button, Center, Textarea, Text, Heading
 } from '@chakra-ui/react'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../../Component/Navbar/Navbar';
-
+import { MentorContract } from "../../Blockend/interact"
+import web3 from '../../Blockend/web3';
 
 type BecomeMentorProps = {
 
@@ -19,39 +20,55 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
 
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
-    const [image, setImage] = useState('');
-    const [desc, setDesc] = useState('');
+    const [description, setDescription] = useState('');
+    const [mentorAddress, setMentorAddress] = useState('');
+    const [account, setAccount] = useState("");
 
-    const [buttonText, setButtonText] = useState("Send");
+
+    useEffect(() => {
+        const getAccount = async () => {
+            const accounts = await web3.eth.getAccounts();
+            setAccount(accounts[0]);
+            setMentorAddress(account);
+        };
+        getAccount();
+    }, []);
+
+
+    const [errors, setErrors] = useState({});
+
+    const [buttonText, setButtonText] = useState("Register");
 
     // Setting success or failure messages states
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showFailureMessage, setShowFailureMessage] = useState(false);
 
 
-    const handleSubmitTwo = async (e: React.FormEvent) => {
+    const handleMentorRegistration = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // let isValidForm = handleValidation();
-        setButtonText("Sending");
+        if (MentorContract && name && description && title) {
+            setButtonText("Registering");
 
-
-
-
-
-
-
-
-
-
-        setShowSuccessMessage(true);
-        setShowFailureMessage(false);
-
-        setButtonText("Send");
-
-
-
-
+            try {
+                const accounts = await web3.eth.getAccounts();
+                await MentorContract.methods.registerAsMentor(name, description, title).send({ from: accounts[0] });
+                console.log('Mentor registered successfully!');
+                setShowSuccessMessage(true);
+                setShowFailureMessage(false);
+                setName("");
+                setDescription("");
+                setTitle("");
+                setButtonText("Register");
+                // Additional logic after successful mentor registration
+                console.log(name, title, mentorAddress, description);
+            } catch (error) {
+                setShowSuccessMessage(false);
+                setShowFailureMessage(true);
+                setButtonText("Send");
+                console.error(error);
+            }
+        }
     };
 
     return (
@@ -64,26 +81,27 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
                     <Heading>Become a Mentor</Heading>
                     <br></br>
                     <br></br>
-                    <form onSubmit={handleSubmitTwo}>
+
+                    <form onSubmit={handleMentorRegistration}>
                         <Stack>
 
                             <Flex>  <Stack flexGrow={1}>
 
 
 
-                                <FormLabel htmlFor='fullname'> Name</FormLabel>
+                                <FormLabel htmlFor='name'> Name</FormLabel>
                                 <Input type='text' value={name}
                                     onChange={(e) => {
                                         setName(e.target.value);
                                     }}
-                                    name="fullname" />
+                                    name="name" />
 
                             </Stack>
 
                                 <Stack marginLeft={5} flexGrow={1}>
-                                    <FormLabel htmlFor='email'>Title</FormLabel>
-                                    <Input type="email"
-                                        name="email"
+                                    <FormLabel htmlFor='title'>Title</FormLabel>
+                                    <Input type="text"
+                                        name="title"
                                         value={title}
                                         onChange={(e) => {
                                             setTitle(e.target.value);
@@ -92,30 +110,31 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
 
 
 
-                            <FormLabel htmlFor='subject'>Provide Image URL</FormLabel>
-                            <Input type="text"
+                            {/* <FormLabel htmlFor='subject'>Provide Image URL</FormLabel> */}
+                            {/* <Input type="text"
                                 name="subject"
                                 value={image}
                                 onChange={(e) => {
                                     setImage(e.target.value);
-                                }} />
-                            <FormLabel htmlFor='subject'>Wallet Address</FormLabel>
+                                }} /> */}
+                            <FormLabel htmlFor='address'>Wallet Address</FormLabel>
+                            <Text>{account}</Text>
                             <Text>account address get from index.tsx</Text>
                             <FormLabel htmlFor='message'>Tell about yourself</FormLabel>
                             <Textarea name="message"
-                                value={desc}
+                                value={description}
                                 onChange={(e) => {
-                                    setDesc(e.target.value);
+                                    setDescription(e.target.value);
                                 }} maxHeight={"250px"} />
 
 
 
-                            <Button bg="teal" type='submit' >Submit</Button>
+                            <Button bg="teal" type='submit' >{buttonText}</Button>
 
 
 
-                            {showSuccessMessage && <Text align={"center"} color={"brand.200"} fontWeight={600}>Message Sent Successfully!</Text>}
-                            {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not deliver the message, please check all the fields and try again!</Text>}
+                            {showSuccessMessage && <Text align={"center"} color={"green.400"} fontWeight={600}>Mentor Registered Successfully!</Text>}
+                            {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not register you, please connect to matic and check balance and try again!</Text>}
                         </Stack>
 
                         {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
