@@ -26,13 +26,13 @@ const Homepage: React.FC<HomepageProps> = () => {
 
             <Box bg="brand.100" p={6}>
                 <Stack alignItems={"center"}>
-                    
-                <Heading>Our Mentors Work in</Heading>
+
+                    <Heading>Our Mentors Work in</Heading>
                 </Stack>
                 <Flex justifyContent={"space-between"} className='buildSlide'>
                     {
                         companies.map((item) => (
-                            <Box bg="whiteAlpha.500" borderRadius={ 4} p= "4" my={5} key={item}>
+                            <Box bg="whiteAlpha.500" borderRadius={4} p="4" my={5} key={item}>
                                 <Heading fontSize={20}>{item}</Heading>
                             </Box>
                         ))
@@ -40,10 +40,10 @@ const Homepage: React.FC<HomepageProps> = () => {
                     }
                 </Flex>
 
-                
+
             </Box>
-            <Center bg="black" p="10">
-                <Box width={"400px"} height={"300px"} bg="white" p ="10" borderRadius={10}>
+            <Center bg="brand.100" p="10">
+                <Box width={"400px"} height={"300px"} bg="white" p="10" borderRadius={10}>
 
 
                     <Stack alignItems={"center"}>

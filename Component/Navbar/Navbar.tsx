@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
     return <div style={{ position: "sticky", top: "0", zIndex: 1 }}>
 
 
-        <Flex bg={"black"}
+        <Flex bg={"brand.100"}
             height="60px"
             color="white"
 
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                         {showProfile && (
                             <Box marginLeft={-40} bg={"white"} mt={10} position={"absolute"} width={"200px"} height={"200px"} >
 
-                                <Text color={"black"}>{account}</Text>
+                                <Text color={"brand.100"}>{account}</Text>
                             </Box>
                         )}
                     </Box>
