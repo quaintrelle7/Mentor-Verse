@@ -6,6 +6,7 @@ import { Box, Grid } from '@chakra-ui/react';
 import Navbar from '../../../Component/Navbar/Navbar';
 import { MentorContract } from "../../../Blockend/interact"
 import web3 from '../../../Blockend/web3'
+import ProfilePage from '../../../Component/ProfilePage/Profilepage';
 
 
 type MentorProfilePageProps = {
@@ -33,26 +34,15 @@ const MentorProfilePage: React.FC<MentorProfilePageProps> = () => {
             console.log("data", mentorList);
         }
         fetchData();
-    }, [MentorContract]);
+    }, []);
 
     return (
         <div>
             <Navbar />
 
-            <Box>
 
-
-                {/* {mentorList.map((mentor, index) => (
-                    <li key={index}>
-                        <strong>Name: </strong>{mentor.name}<br />
-                        <strong>Description: </strong>{mentor.description}<br />
-                        <strong>Title: </strong>{mentor.title}<br />
-                        <strong>Address: </strong>{mentor.mentorAddress}<br />
-                    </li>
-                ))} */}
-            </Box>
             <Box width={"100%"} height={"800px"} bg="brand.100" p={10}>
-              
+
 
                 <Grid templateColumns={{
                     base: 'repeat(1, 1fr)',
@@ -62,10 +52,11 @@ const MentorProfilePage: React.FC<MentorProfilePageProps> = () => {
                 }} gap={{ sm: 6, md: 8, lg: 8 }} alignContent={"center"} py={6} >
                     {
                         mentorList.map((item, index) =>
-                            <MentorItem key={index} name={item.name}
+                            <ProfilePage key={index} name={item.name}
                                 title={item.title}
                                 description={item.description}
-                                address={item.mentorAddress}
+                                mentorAddress={item.mentorAddress}
+                                image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80"
                             />)
 
 

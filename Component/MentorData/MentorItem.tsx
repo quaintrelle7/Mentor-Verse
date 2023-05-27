@@ -1,7 +1,7 @@
-import { Center, Box, Stack, Heading, Image, Flex, Button, Text } from '@chakra-ui/react';
+import { Center, Box, Stack, Heading, Image, Flex, Button, Text, } from '@chakra-ui/react';
 import React from 'react';
 import ApplyForMentor from '../../Component/Modal/ApplyForMentor';
-
+import Link from 'next/link';
 type MentorItemProps = {
     name: String,
     title: String,
@@ -21,7 +21,7 @@ const MentorItem: React.FC<MentorItemProps> = ({
 
         <>
             <Center>
-                <Box width={"400px"} height={"450px"} bg="white" p="10" borderRadius={10}>
+                <Box width={"400px"} height={"500px"} bg="white" p="10" borderRadius={10}>
 
 
                     <Stack alignItems={"center"}>
@@ -39,7 +39,10 @@ const MentorItem: React.FC<MentorItemProps> = ({
                         </Flex>
 
                         {/* <Button>Schedule a call</Button> */}
+
                         < ApplyForMentor />
+                        <Link href={`/Profile/${address}`} >Go to Profile </Link>
+
 
                     </Stack>
 
