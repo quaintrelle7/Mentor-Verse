@@ -77,7 +77,7 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
             <Navbar />
 
             <Center bg="brand.100" color={"white"} width={"100%"} height={"780px"} overflow={"initial"}>
-                <Stack alignItems={"center"}>
+                <Stack alignItems={"center"} bg ="whiteAlpha.300" p={10} borderRadius={10}>
                     <Heading>Become a Mentor</Heading>
                     <br></br>
                     <br></br>
@@ -119,7 +119,7 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
                                 }} /> */}
                             <FormLabel htmlFor='address'>Wallet Address</FormLabel>
                             <Text>{account}</Text>
-                            <Text>account address get from index.tsx</Text>
+                           
                             <FormLabel htmlFor='message'>Tell about yourself</FormLabel>
                             <Textarea name="message"
                                 value={description}

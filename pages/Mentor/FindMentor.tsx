@@ -41,16 +41,7 @@ const FindMentor: React.FC<FindMentorProps> = () => {
             <Navbar />
 
             <Box>
-                <ul>
-                    {mentorList.map((mentor, index) => (
-                        <li key={index}>
-                            <strong>Name: </strong>{mentor.name}<br />
-                            <strong>Description: </strong>{mentor.description}<br />
-                            <strong>Title: </strong>{mentor.title}<br />
-                            <strong>Address: </strong>{mentor.mentorAddress}<br />
-                        </li>
-                    ))}
-                </ul>
+                
 
                 {/* {mentorList.map((mentor, index) => (
                     <li key={index}>
@@ -71,13 +62,12 @@ const FindMentor: React.FC<FindMentorProps> = () => {
                     lg: 'repeat(3, 1fr)'
                 }} gap={{ sm: 6, md: 8, lg: 8 }} alignContent={"center"} py={6} >
                     {
-                        Mentors.map((item) =>
-                            <MentorItem key={item.address} name={item.name}
+                        mentorList.map((item, index) =>
+                            <MentorItem key={index} name={item.name}
                                 title={item.title}
-                                desc={item.desc}
-                                address={item.address}
-                                image={item.image}
-                                expertList={item.expertList} />)
+                                description={item.description}
+                                address={item.mentorAddress}
+                                />)
 
 
 
