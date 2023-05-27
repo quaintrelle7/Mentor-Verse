@@ -93,4 +93,13 @@ contract MentorMenteeRegistration {
         Mentee memory mentee = menteeList[_index];
         return (mentee.name, mentee.menteeAddress);
     }
+
+     function getMentorList() external view returns (Mentor[] memory) {
+        return mentorList;
+    }
+
+     function getMenteeList() external view returns (Mentee[] memory) {
+        return menteeList;
+    }
+
 }

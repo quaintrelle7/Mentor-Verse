@@ -163,6 +163,31 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getMenteeList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "menteeAddress",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct MentorMenteeRegistration.Mentee[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -204,6 +229,41 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getMentorList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "mentorAddress",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct MentorMenteeRegistration.Mentor[]",
+        "name": "",
+        "type": "tuple[]"
       }
     ],
     "stateMutability": "view",
