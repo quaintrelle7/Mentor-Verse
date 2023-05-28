@@ -16,11 +16,12 @@ const Homepage: React.FC<HomepageProps> = () => {
 
         <>
 
-            <Box bg="brand.200" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "600px" }} py={{ base: "15vw", lg: "5vw" }} px={"5vw"}>
-
-                <Stack alignItems={"center"}>
+            <Box bg="brand.200" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "600px" }} py={6} px={"5vw"}>
+                <Text fontSize={15} fontStyle="italic" align={"right"}>Connect to Mumbai Testnet</Text>
+                <Stack mt={5} alignItems={"center"}>
 
                     <Flex justifyContent={"space-between"} mb={0}>
+
 
                         <Heading fontSize={23} color={"red.200"}>High performers use mentors</Heading>
                     </Flex>
@@ -31,7 +32,7 @@ const Homepage: React.FC<HomepageProps> = () => {
 
                     <Flex justifyContent={"space-between"} mb={20}>
 
-                        <Heading  fontSize={30} color={"brand.300"}>Stay Anonymous & Meet Mentors from all over the World</Heading>
+                        <Heading fontSize={30} color={"brand.300"}>Stay Anonymous & Meet Mentors from all over the World</Heading>
                     </Flex>
 
                     <Box marginTop={"20px"}>
@@ -42,9 +43,9 @@ const Homepage: React.FC<HomepageProps> = () => {
 
                                     Book 1:1 Sessions with all the elite mentors and boost your  Project
                                 </Heading>
-                               <Flex pt={5}justifyContent={"center"}>
-                                    <FaRegHandshake  fontSize={50}/>
-                               </Flex>
+                                <Flex pt={5} justifyContent={"center"}>
+                                    <FaRegHandshake fontSize={50} />
+                                </Flex>
                             </Box>
 
                             <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
@@ -64,11 +65,11 @@ const Homepage: React.FC<HomepageProps> = () => {
                                     <GiReceiveMoney fontSize={50} />
                                 </Flex>
                             </Box>
-                            
+
 
                         </Flex>
                     </Box>
-                   
+
 
 
                 </Stack>
