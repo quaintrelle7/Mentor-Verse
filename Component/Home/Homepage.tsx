@@ -35,7 +35,7 @@ const Homepage: React.FC<HomepageProps> = () => {
                     </Flex>
 
                     <Box marginTop={"20px"}>
-                        <Flex justifyContent={"space-between"} p={20} >
+                        <Flex justifyContent={"space-between"} py={20} >
                             <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
                                 <Heading fontWeight={600} fontSize={25}>
                                     Find your Mentors at one place.
