@@ -50,7 +50,7 @@ export default function Footer() {
                 as={Stack}
                 maxW={'100%'}
                 py={4}
-                px={2}
+                px={20}
                 direction={{ base: 'column', md: 'row' }}
                 spacing={4}
                 justify={{ base: 'center', md: 'space-between' }}
