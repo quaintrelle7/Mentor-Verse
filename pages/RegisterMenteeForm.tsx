@@ -97,7 +97,7 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                 <Flex width="90%" mx={20} justifyContent={"space-between"}>
 
                     <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                        <Heading color="brand.300">Register as a Mentee</Heading>
+                        <Heading fontSize={30} color="brand.300">Register as a Mentee</Heading>
                         <br></br>
                         <br></br>
 
@@ -138,12 +138,12 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                     </Stack>
 
                     <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                        <Heading color="white">Be First</Heading>
+                        <Heading fontSize={25} color="white">Be First</Heading>
                         <br></br>
 
-                        <Heading color="white">Get Smarter</Heading>
+                        <Heading fontSize={30} color="white">Get Smarter</Heading>
                         <br></br>
-                        <Heading color="white">Set Your Goals</Heading>
+                        <Heading fontSize={35} color="white">Set Your Goals</Heading>
 
                         <Link mt={4}href="/ScheduleCall">
                         <Button>Schedule Call</Button>
@@ -156,7 +156,7 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                     </Stack>
 
                     <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                        <Heading color="brand.300">Mint NFT</Heading>
+                        <Heading fontSize={30} color="brand.300">Mint NFT</Heading>
                         <form onSubmit={handleSubmit}>
 
                             <label>
@@ -177,7 +177,7 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                 </Flex>
 
                 <Stack gap={2} width={"90%"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                    <Heading color="brand.300">Mentorships Received</Heading>
+                    <Heading fontSize={30} color="brand.300">Mentorships Received</Heading>
                     <Flex bg="brand.200" fontSize={18} p={3} borderRadius={10} justifyContent={"space-between"}>
                         <AiFillCheckCircle fontSize={20} color='green.400' />
                         <Text>Mentored by 0xft709A463F71c9F08907642e7ec16B1375a83B2C </Text>
