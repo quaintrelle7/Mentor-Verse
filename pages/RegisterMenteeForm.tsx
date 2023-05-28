@@ -7,6 +7,8 @@ import {
     Box, Input, Flex, Stack, Button, Center, Textarea, Text, Heading
 } from '@chakra-ui/react'
 
+import { AiFillCheckCircle } from "react-icons/ai"
+
 import { useState, useEffect } from 'react';
 import Navbar from '../Component/Navbar/Navbar';
 import { MentorContract, NFTContract } from "../Blockend/interact"
@@ -91,68 +93,107 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
             <Navbar />
 
             <Stack py={6} gap={6} alignItems={"center"} bg="brand.100" color={"white"} width={"100%"} height={"780px"} overflow={"initial"}>
-                <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                    <Heading color="brand.300">Register as a Mentee</Heading>
-                    <br></br>
-                    <br></br>
 
-                    <form onSubmit={handleMentorRegistration}>
-                        <Stack>
+                <Flex width="90%" mx={20} justifyContent={"space-between"}>
 
-                            <Stack flexGrow={1}>
+                    <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+                        <Heading color="brand.300">Register as a Mentee</Heading>
+                        <br></br>
+                        <br></br>
+
+                        <form onSubmit={handleMentorRegistration}>
+                            <Stack>
+
+                                <Stack flexGrow={1}>
 
 
 
-                                <FormLabel htmlFor='name'> Name</FormLabel>
-                                <Input type='text' value={name}
-                                    onChange={(e) => {
-                                        setName(e.target.value);
-                                    }}
-                                    name="name" />
+                                    <FormLabel htmlFor='name'> Name</FormLabel>
+                                    <Input type='text' value={name}
+                                        onChange={(e) => {
+                                            setName(e.target.value);
+                                        }}
+                                        name="name" />
 
+                                </Stack>
+
+
+
+
+
+
+
+
+
+                                <Button bg="teal" type='submit' >{buttonText}</Button>
+
+
+
+                                {showSuccessMessage && <Text align={"center"} color={"green.400"} fontWeight={600}>Mentee Registered Successfully!</Text>}
+                                {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not register you, please connect to MUMBAI and check balance and try again!</Text>}
                             </Stack>
 
+                            {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
+                        </form>
+                    </Stack>
+
+                    <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+                        <Heading color="white">Be First</Heading>
+                        <br></br>
+
+                        <Heading color="white">Get Smarter</Heading>
+                        <br></br>
+                        <Heading color="white">Set Your Goals</Heading>
 
 
 
 
 
+                    </Stack>
 
+                    <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+                        <Heading color="brand.300">Mint NFT</Heading>
+                        <form onSubmit={handleSubmit}>
 
+                            <label>
+                                To Address:
+                                <Input type="text" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
+                            </label>
+                            <br />
+                            <label>
+                                Token URI:
+                                <Input type="text" value={tokenURI} onChange={(e) => setTokenURI(e.target.value)} />
+                            </label>
+                            <br />
+                            <br />
+                            <Button width={"100%"} bg="teal" type="submit">Mint NFT</Button>
+                        </form>
+                    </Stack>
 
-                            <Button bg="teal" type='submit' >{buttonText}</Button>
+                </Flex>
 
-
-
-                            {showSuccessMessage && <Text align={"center"} color={"green.400"} fontWeight={600}>Mentee Registered Successfully!</Text>}
-                            {showFailureMessage && <Text align={"center"} color={"red"} fontWeight={400}>Could not register you, please connect to MUMBAI and check balance and try again!</Text>}
-                        </Stack>
-
-                        {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
-                    </form>
+                <Stack gap={2} width={"90%"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+                    <Heading color="brand.300">Mentorships Received</Heading>
+                    <Flex bg="brand.200" fontSize={18} p={3} borderRadius={10} justifyContent={"space-between"}>
+                        <AiFillCheckCircle fontSize={20} color='green.400' />
+                        <Text>Mentored by 0xft709A463F71c9F08907642e7ec16B1375a83B2C </Text>
+                        <Text>For Polygon Development </Text>
+                    </Flex>
+                    <Flex bg="brand.200" fontSize={18} p={3} borderRadius={10} justifyContent={"space-between"}>
+                        <AiFillCheckCircle fontSize={20} color='green.400' />
+                        <Text>Mentored by 0xft709A463F71c9F08907642e7ec16B1375a83B2C </Text>
+                        <Text>For Hasura API </Text>
+                    </Flex>
+                    <Flex bg="brand.200" fontSize={18} p={3} borderRadius={10} justifyContent={"space-between"}>
+                        <AiFillCheckCircle fontSize={20} color='green.400' />
+                        <Text>Mentored by 0xft709A463F71c9F08907642e7ec16B1375a83B2C </Text>
+                        <Text>For Ethereum Development </Text>
+                    </Flex>
                 </Stack>
-            
-                <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                    <Heading color="brand.300">Mint NFT</Heading>
-                    <form onSubmit={handleSubmit}>
 
-                        <label>
-                            To Address:
-                            <Input type="text" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
-                        </label>
-                        <br />
-                        <label>
-                            Token URI:
-                            <Input type="text" value={tokenURI} onChange={(e) => setTokenURI(e.target.value)} />
-                        </label>
-                        <br />
-                        <br/>
-                        <Button width={"100%"} bg="teal" type="submit">Mint NFT</Button>
-                    </form>
-                </Stack>
             </Stack>
 
-            
+
 
 
         </>

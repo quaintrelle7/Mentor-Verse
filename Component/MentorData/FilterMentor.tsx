@@ -2,11 +2,11 @@ import { Box, Flex, Heading, Input } from '@chakra-ui/react';
 import React from 'react';
 
 type FilterMentorProps = {
-    
+
 };
 
-const FilterMentor:React.FC<FilterMentorProps> = () => {
-    
+const FilterMentor: React.FC<FilterMentorProps> = () => {
+
     return (
         <Box borderRadius={5} color={"white"} bg="brand.100" p={7}>
 
@@ -17,7 +17,7 @@ const FilterMentor:React.FC<FilterMentorProps> = () => {
                     <Input></Input>
                 </Box>
                 <Box>
-                    <label>Technology</label>
+                    <label>Services</label>
                     <Input></Input>
                 </Box>
             </Flex>

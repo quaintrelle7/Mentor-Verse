@@ -1,6 +1,6 @@
 import { Box, Flex, Center, Stack, Grid, Image, Text, Divider, Heading, Button, Input } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
-import { AiFillStar, AiOutlineStar } from "react-icons/ai"
+import { AiFillCheckCircle, AiFillStar, AiOutlineStar } from "react-icons/ai"
 import { NFTContract } from "../../Blockend/interact"
 import web3 from '../../Blockend/web3';
 
@@ -109,6 +109,20 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ name, description, title, men
 
                     <Box width={"40%"}>
                         <Heading fontWeight={700} fontSize={25} color={"brand.300"} pb={5}>Feedback and Review</Heading>
+
+                        <Stack  gap={2} width={"90%"} bg="whiteAlpha.100" p={10} borderRadius={10}>
+
+                            <Flex bg="brand.200" fontSize={12} p={3} borderRadius={10} justifyContent={"space-between"}>
+
+                                <Text> 0xft709A463F71c9F08907642e7ec16B1375a83B2C  Thanks you</Text>
+                                
+                            </Flex>
+                            <Flex bg="brand.200" fontSize={12} p={3} borderRadius={10} justifyContent={"space-between"}>
+                                <Text> 0xft709A463F71c9F08907642e7ec16B1375a83B2C  Gifted you NFT</Text>
+                            </Flex>
+                           
+                        </Stack>
+
                     </Box>
                     <Box>
                         <Heading fontWeight={700} fontSize={25} color={"brand.300"} pb={5}>Received NFTs </Heading>

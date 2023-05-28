@@ -13,21 +13,47 @@ const Homepage: React.FC<HomepageProps> = () => {
 
         <>
 
-            <Center bg="brand.200" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "500px" }} py={{ base: "15vw", lg: "5vw" }} px={"5vw"}>
-                <Box width={"50%"}>
-                    <Heading>
-                        Find your Web3 Mentors at one place.
-                        Book 1:1 Sessions with all the elite mentors and boost your Web3 Project
-                    </Heading>
-                </Box>
+            <Box bg="brand.200" width={"100%"} color={"white"} height={{ base: "100%", md: "100%", lg: "500px" }} py={{ base: "15vw", lg: "5vw" }} px={"5vw"}>
+
+                <Stack alignItems={"center"}>
+
+                    <Flex justifyContent={"space-between"} mb={20}>
+
+                        <Heading color={"brand.300"}>High performers use mentors</Heading>
+                    </Flex>
+                    <Flex mt={20} justifyContent={"space-between"} >
+                        <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Heading fontWeight={600} fontSize={25}>
+                                Find your Mentors at one place.
+                                Book 1:1 Sessions with all the elite mentors and boost your  Project
+                            </Heading>
+                        </Box>
+
+                        <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Heading fontWeight={600} fontSize={25}>
+                                Stay anonymous and make a difference. You do not need to reveal identity to mentor or get mentored.
+                            </Heading>
+                        </Box>
+
+                        <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Heading fontWeight={600} fontSize={25}>
+                                A targeted conversation with an expert can create better insights and save you time and money.
+                            </Heading>
+                        </Box>
+
+                    </Flex>
 
 
-            </Center>
+                </Stack>
+
+
+
+            </Box>
 
             <Box bg="brand.100" p={6}>
                 <Stack alignItems={"center"}>
 
-                    <Heading color={"brand.300"}>Our Mentors Work in</Heading>
+                    <Heading color={"brand.300"}>Our Mentors Work At</Heading>
                 </Stack>
                 <Flex justifyContent={"space-between"} className='buildSlide'>
                     {
