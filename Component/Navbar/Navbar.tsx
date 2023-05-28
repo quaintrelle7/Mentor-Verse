@@ -1,11 +1,8 @@
-import { Button, Divider, Box, Flex, Link, Text } from '@chakra-ui/react';
+import { Divider, Flex, Link } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { GrClose } from "react-icons/gr"
-import { FaWindowClose } from "react-icons/fa"
-import { IoMdClose } from "react-icons/io"
-import { CgProfile } from "react-icons/cg"
-import web3 from "../../Blockend/web3"
+import { IoMdClose } from "react-icons/io";
+import web3 from "../../Blockend/web3";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import MentorItem from '../../../Component/MentorData/MentorItem';
 import { useRouter } from 'next/router';
 
 
-import { Box, Grid } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 import Navbar from '../../../Component/Navbar/Navbar';
-import { MentorContract, NFTContract } from "../../../Blockend/interact"
+import { MentorContract } from "../../../Blockend/interact"
 import web3 from '../../../Blockend/web3'
 import ProfilePage from '../../../Component/ProfilePage/Profilepage';
 

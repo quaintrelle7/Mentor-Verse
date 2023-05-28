@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import MentorItem from '../../Component/MentorData/MentorItem';
-import Mentors from '../../Component/MentorData/MentorData';
 import { Box, Grid } from '@chakra-ui/react';
-import FilterMentor from '../../Component/MentorData/FilterMentor';
-import Navbar from '../../Component/Navbar/Navbar';
-import { MentorContract } from "../../Blockend/interact"
+import React, { useEffect, useState } from 'react';
+import { MentorContract } from "../../Blockend/interact";
 import web3 from '../../Blockend/web3';
-import { TupleType } from 'typescript';
+import FilterMentor from '../../Component/MentorData/FilterMentor';
+import MentorItem from '../../Component/MentorData/MentorItem';
+import Navbar from '../../Component/Navbar/Navbar';
 
 
 type FindMentorProps = {

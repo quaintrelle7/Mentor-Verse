@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Center, Flex, Divider, Heading, Text, Stack, Image } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Text, Stack, Image } from '@chakra-ui/react';
 import Footer from './Footer';
 import { FaRegHandshake, FaUserSecret } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";

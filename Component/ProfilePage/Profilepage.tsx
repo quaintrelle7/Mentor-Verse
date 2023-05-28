@@ -1,7 +1,7 @@
-import { Box, Flex, Center, Stack, Grid, Image, Text, Divider, Heading, Button, Input } from '@chakra-ui/react';
+import { Box, Button, Divider, Flex, Grid, Heading, Image, Input, Stack, Text } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
-import { AiFillCheckCircle, AiFillStar, AiOutlineStar } from "react-icons/ai"
-import { NFTContract } from "../../Blockend/interact"
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { NFTContract } from "../../Blockend/interact";
 import web3 from '../../Blockend/web3';
 
 type ProfilePageProps = {

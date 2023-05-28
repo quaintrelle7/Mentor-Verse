@@ -1,6 +1,5 @@
-import React from 'react';
-import { Text, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Input, Box, Stack, Checkbox, HTMLChakraComponents, Textarea, FormControl, FormLabel, useDisclosure, Flex, Heading, Center } from '@chakra-ui/react';
-import { useState } from "react";
+import { Box, Button, Flex, FormLabel, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Stack, Text, Textarea, useDisclosure } from '@chakra-ui/react';
+import React, { useState } from 'react';
 
 type ApplyForMentorProps = {
     //Wallet adddress of mentee

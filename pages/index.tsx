@@ -1,12 +1,9 @@
-import Head from 'next/head'
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Head from 'next/head';
 
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../Component/Navbar/Navbar'
-import Homepage from '../Component/Home/Homepage'
-import web3 from '../Blockend/web3'
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
+import web3 from '../Blockend/web3';
+import Homepage from '../Component/Home/Homepage';
+import Navbar from '../Component/Navbar/Navbar';
 
 
 export default function Home() {

@@ -1,18 +1,21 @@
-import React from 'react';
 import {
-    FormControl,
+    Button,
+    Flex,
     FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-    Box, Input, Flex, Stack, Button, Center, Textarea, Text, Heading, Link
-} from '@chakra-ui/react'
+    Heading,
+    Input,
+    Link,
+    Stack,
+    Text
+} from '@chakra-ui/react';
+import React from 'react';
 
-import { AiFillCheckCircle } from "react-icons/ai"
+import { AiFillCheckCircle } from "react-icons/ai";
 
-import { useState, useEffect } from 'react';
-import Navbar from '../Component/Navbar/Navbar';
-import { MentorContract, NFTContract } from "../Blockend/interact"
+import { useEffect, useState } from 'react';
+import { MentorContract, NFTContract } from "../Blockend/interact";
 import web3 from '../Blockend/web3';
+import Navbar from '../Component/Navbar/Navbar';
 
 type RegisterMenteeFormProps = {
 
