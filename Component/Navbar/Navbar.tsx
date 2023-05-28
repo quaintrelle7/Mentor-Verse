@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                     letterSpacing={1}
                     fontSize={"22px"}
                     color={"brand.300"}>
-                    Web3Mentor
+                    Mentor-Verse
                 </Flex>
             </Link>
 
