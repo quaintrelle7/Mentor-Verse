@@ -114,7 +114,7 @@ const Homepage: React.FC<HomepageProps> = () => {
                         <Stack alignItems={"center"}>
                             <Image width={"100px"} height={"100px"} borderRadius={"full"} src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Mentor Picture"></Image>
                             <Heading fontSize={15}>0X8987534253FG873/ ENS </Heading>
-                            <Text fontWeight={700} color={"brand.200"}>Blockchain Advocate</Text>
+                            <Text fontWeight={700} color={"brand.200"}>Blockchain Developer</Text>
                             <Text>Hi! I have worked at Polygon and knows about Layer 2 functionalities. I have 3 years of experience. </Text>
 
 
@@ -124,7 +124,7 @@ const Homepage: React.FC<HomepageProps> = () => {
                         <Stack alignItems={"center"}>
                             <Image width={"100px"} height={"100px"} borderRadius={"full"} src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mentor Picture"></Image>
                             <Heading fontSize={15}>0X8987534253FG873/ ENS </Heading>
-                            <Text fontWeight={700} color={"brand.200"}>Blockchain Advocate</Text>
+                            <Text fontWeight={700} color={"brand.200"}>Investor</Text>
                             <Text>Hi! I have worked at Polygon and knows about Layer 2 functionalities. I have 3 years of experience. </Text>
 
 
