@@ -4,7 +4,7 @@ import {
     FormLabel,
     FormErrorMessage,
     FormHelperText,
-    Box, Input, Flex, Stack, Button, Center, Textarea, Text, Heading
+    Box, Input, Flex, Stack, Button, Center, Textarea, Text, Heading, Link
 } from '@chakra-ui/react'
 
 import { AiFillCheckCircle } from "react-icons/ai"
@@ -144,6 +144,10 @@ const RegisterMenteeForm: React.FC<RegisterMenteeFormProps> = () => {
                         <Heading color="white">Get Smarter</Heading>
                         <br></br>
                         <Heading color="white">Set Your Goals</Heading>
+
+                        <Link mt={4}href="/ScheduleCall">
+                        <Button>Schedule Call</Button>
+                        </Link>
 
 
 
