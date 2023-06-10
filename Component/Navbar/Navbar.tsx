@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     return <div style={{ position: "sticky", top: "0", zIndex: 1 }}>
 
 
-        <Flex bg={"brand.100"}
+        <Flex bg={"brand.400"}
             height="60px"
             color="white"
 

@@ -83,8 +83,8 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
             </Flex>
             <Center bg="brand.100" color={"white"} width={"100%"} height={"780px"} mt={-20} overflow={"initial"}>
                 
-                <Stack alignItems={"center"} bg="whiteAlpha.100" p={10} borderRadius={10}>
-                    <Heading fontSize={30} color="brand.300">Become a Mentor</Heading>
+                <Stack alignItems={"center"} bg="whiteAlpha.300" p={10} borderRadius={10}>
+                    <Heading fontSize={30} color="brand.400">Become a Mentor</Heading>
                     <br></br>
                     <br></br>
 
@@ -135,7 +135,7 @@ const BecomeMentor: React.FC<BecomeMentorProps> = () => {
 
 
 
-                            <Button bg="teal" type='submit' >{buttonText}</Button>
+                            <Button  type='submit' >{buttonText}</Button>
 
 
 

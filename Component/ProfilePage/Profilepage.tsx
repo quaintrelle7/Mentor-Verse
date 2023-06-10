@@ -56,7 +56,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ name, description, title, men
 
         <>
 
-            <Box color={"white"} bg={"whiteAlpha.100"} width={"100%"} px={10} py={15} borderRadius={10} height={"600px"}>
+            <Box color={"white"} bg={"whiteAlpha.300"} width={"100%"} px={10} py={15} borderRadius={10} height={"600px"}>
 
                 <Flex>
                     <Box width={"40%"}>

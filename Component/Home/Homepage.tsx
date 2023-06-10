@@ -37,7 +37,7 @@ const Homepage: React.FC<HomepageProps> = () => {
 
                     <Box marginTop={"20px"}>
                         <Flex justifyContent={"space-between"} py={20} >
-                            <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Box width={"30%"} bg="brand.400" borderRadius={5} p={5}>
                                 <Heading fontWeight={600} fontSize={25}>
                                     Find your Mentors at one place.
 
@@ -48,7 +48,7 @@ const Homepage: React.FC<HomepageProps> = () => {
                                 </Flex>
                             </Box>
 
-                            <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Box width={"30%"} bg="brand.400" borderRadius={5} p={5}>
                                 <Heading fontWeight={600} fontSize={25}>
                                     Stay anonymous and make a difference. You do not need to reveal identity to mentor or get mentored.
                                 </Heading>
@@ -57,7 +57,7 @@ const Homepage: React.FC<HomepageProps> = () => {
                                 </Flex>
                             </Box>
 
-                            <Box width={"30%"} bg="blackAlpha.500" borderRadius={5} p={5}>
+                            <Box width={"30%"} bg="whiteAlpha.400" borderRadius={5} p={5}>
                                 <Heading fontWeight={600} fontSize={25}>
                                     A targeted conversation with an expert can create better insights and save you time and money.
                                 </Heading>

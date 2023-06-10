@@ -27,8 +27,11 @@ const MentorItem: React.FC<MentorItemProps> = ({
                     <Stack alignItems={"center"}>
                         <Image width={"100px"} height={"100px"} borderRadius={"full"} src={image as string} alt="Mentor Picture"></Image>
                         <Heading fontSize={15}>{address} </Heading>
-                        <Text fontWeight={700} color={"brand.200"}>{title}</Text>
-                        <Text>{description}</Text>
+                        <Text fontWeight={700} color={"brand.400"}>{title}</Text>
+                        <Box height={"140"}>
+                            <Text>{description}</Text>
+                        </Box>
+
 
                         <Flex >
                             {
