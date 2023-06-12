@@ -1,4 +1,4 @@
-#About MentorVerse
+# About MentorVerse
 
 The mentorship platfrom brings the people on decentralized platform, where mentors can earn fair amount for their valuable mentorship unlike centralized platform. It helps in keeping identities hidden, it matters to the people who want to provide guidance to the projects, without revealing their identity.
 
